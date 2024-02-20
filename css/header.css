@@ -1,7 +1,7 @@
 header {
     height: 2em;
     background-color: var(--blue);
-    padding: .5em .5em .5em .5em;
+    padding: .5em 1em .5em 1em;
 
     display: flex;
     justify-content: center;

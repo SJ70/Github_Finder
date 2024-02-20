@@ -6,14 +6,28 @@
     --cyan: #19a1b8;
     --white: white;
     --footer-color: #f8f9fa;
+    --border-color: #e4e4e4;
+    --description-color: #9da4aa;
 
-    --width: 1024px;
+    --width: 800px;
 }
 
 body {
     margin: 0;
+    color: var(--black);
 }
 
 p {
+    padding: 0;
     margin: 0;
+}
+
+.box, input[type='text'] {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+input[type='text'] {
+    padding: .5em 1em .5em 1em;
+    font-size: .75em;
 }

@@ -1,0 +1,14 @@
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.search-bar-description {
+    color: var(--description-color);
+}
+
+.search-bar-title {
+    font-weight: 800;
+    font-size: 2em;
+}
