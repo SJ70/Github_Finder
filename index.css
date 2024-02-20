@@ -4,5 +4,16 @@
     --grey: #adb5bd;
     --green: #01b875;
     --cyan: #19a1b8;
+    --white: white;
     --footer-color: #f8f9fa;
+
+    --width: 1024px;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
