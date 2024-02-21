@@ -12,9 +12,19 @@
     --width: 800px;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     margin: 0;
     color: var(--black);
+}
+
+.wrap {
+    min-height: calc(100vh - 4.5em);
+    padding-bottom: .5em;
+    height: 100%;
 }
 
 p {

@@ -12,112 +12,105 @@
         <link rel="stylesheet" href="/css/search-bar.css">
         <link rel="stylesheet" href="/css/tag.css">
         <link rel="stylesheet" href="/css/repos.css">
+        <link rel="stylesheet" href="/css/footer.css">
         <!-- <script type="module", src="./script.js"></script> -->
     </head>
     <body>
+        <div class="wrap">
+            <header>
+                <div>
+                    <img alt="logo" src="./img/logo.png">
+                    <p>
+                        GitHub Finder
+                    </p>
+                </div>
+            </header>
 
-        <header>
-            <div>
-                <img alt="logo" src="./img/logo.png">
-                <p>
-                    GitHub Finder
-                </p>
-            </div>
-        </header>
-
-        <main>
-
-            <div class="search-bar box">
-                <p class="search-bar-title">
-                    Search GitHub Users
-                </p>
-                <p class="search-bar-description">
-                    Enter a username to fetch a user profile and repos
-                </p>
-                <input id="search" type="text"/>
-            </div>
-
-            <div class="profile box">
-                <div class="profile-image-div">
-                    <img class="profile-image" alt="ex" src="/img/logo.png">
-                    <button class="view-profile-btn" id="viewProfileBtn">View Profile</button>
+            <main>
+                <div class="search-bar box">
+                    <p class="search-bar-title">
+                        Search GitHub Users
+                    </p>
+                    <p class="search-bar-description">
+                        Enter a username to fetch a user profile and repos
+                    </p>
+                    <input id="search" type="text"/>
                 </div>
 
-                <div class="profile-description">
-                    <ul class="tags">
-                        <li><button class="tag" id="publicReposBtn">Public Repos: 100</button></li>
-                        <li><button class="tag" id="publicGistsBtn">Public Gists: 200</button></li>
-                        <li><button class="tag" id="followersBtn">Followers: 300</button></li>
-                        <li><button class="tag" id="followingBtn">Following: 400</button></li>
-                    </ul>
-                    <ul class="descriptions">
-                        <li id="company">Company: null</li>
-                        <li id="blog">Blog: www.aaa.com</li>
-                        <li id="location">Location: Korea</li>
-                        <li id="createdAt">Member Since: 2018</li>
-                    </ul>
+                <div class="profile box">
+                    <div class="profile-image-div">
+                        <img class="profile-image" alt="ex" src="/img/logo.png">
+                        <button class="view-profile-btn" id="viewProfileBtn">View Profile</button>
+                    </div>
+
+                    <div class="profile-description">
+                        <ul class="tags">
+                            <li><button class="tag" id="publicReposBtn">Public Repos: 100</button></li>
+                            <li><button class="tag" id="publicGistsBtn">Public Gists: 200</button></li>
+                            <li><button class="tag" id="followersBtn">Followers: 300</button></li>
+                            <li><button class="tag" id="followingBtn">Following: 400</button></li>
+                        </ul>
+                        <ul class="descriptions">
+                            <li id="company">Company: null</li>
+                            <li id="blog">Blog: www.aaa.com</li>
+                            <li id="location">Location: Korea</li>
+                            <li id="createdAt">Member Since: 2018</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <p class="repos-title">
-                Lastest Repos
-            </p>
+                <p class="repos-title">
+                    Lastest Repos
+                </p>
 
-            <ul class="repos">
-                <li class="repo box">
-                    <p class="repo-title">github finder</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-                <li class="repo box">
-                    <p class="repo-title">todo app</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-                <li class="repo box">
-                    <p class="repo-title">github finder</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-                <li class="repo box">
-                    <p class="repo-title">todo app</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-                <li class="repo box">
-                    <p class="repo-title">github finder</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-                <li class="repo box">
-                    <p class="repo-title">todo app</p>
-                    <ul class="tags">
-                        <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                        <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                        <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </main>
+                <ul class="repos">
+                    <li class="repo box">
+                        <p class="repo-title">github finder</p>
+                        <ul class="tags">
+                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
+                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
+                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
+                        </ul>
+                    </li>
+                    <li class="repo box">
+                        <p class="repo-title">todo app</p>
+                        <ul class="tags">
+                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
+                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
+                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
+                        </ul>
+                    </li>
+                    <li class="repo box">
+                        <p class="repo-title">github finder</p>
+                        <ul class="tags">
+                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
+                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
+                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
+                        </ul>
+                    </li>
+                    <li class="repo box">
+                        <p class="repo-title">todo app</p>
+                        <ul class="tags">
+                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
+                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
+                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
+                        </ul>
+                    </li>
+                    <li class="repo box">
+                        <p class="repo-title">github finder</p>
+                        <ul class="tags">
+                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
+                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
+                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </main>
+        </div>
 
         <footer>
+            <p class="footer-title">GitHub Finder</p>
+            <p class="footer-description">made by SJ70</p>
         </footer>
-
     </body>
 </html>
