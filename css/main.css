@@ -4,7 +4,7 @@ main {
     align-items: center;
 }
 
-main > div {
+main .box {
     width: calc(var(--width) - 2em);
     max-width: calc(100vw - 4em);
     margin: 0 1em 0 1em;
