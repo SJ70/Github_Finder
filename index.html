@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/profile.css">
         <link rel="stylesheet" href="/css/search-bar.css">
+        <link rel="stylesheet" href="/css/tag.css">
         <!-- <script type="module", src="./script.js"></script> -->
     </head>
     <body>
@@ -31,6 +33,28 @@
                     Enter a username to fetch a user profile and repos
                 </p>
                 <input id="search" type="text"/>
+            </div>
+
+            <div class="profile box">
+                <div class="profile-image-div">
+                    <img class="profile-image" alt="ex" src="/img/logo.png">
+                    <button class="view-profile-btn" id="viewProfileBtn">View Profile</button>
+                </div>
+
+                <div class="profile-description">
+                    <ul class="tags">
+                        <li><button class="tag" id="publicReposBtn">Public Repos: 100</button></li>
+                        <li><button class="tag" id="publicGistsBtn">Public Gists: 200</button></li>
+                        <li><button class="tag" id="followersBtn">Followers: 300</button></li>
+                        <li><button class="tag" id="followingBtn">Following: 400</button></li>
+                    </ul>
+                    <ul class="descriptions">
+                        <li id="company">Company: null</li>
+                        <li id="blog">Blog: www.aaa.com</li>
+                        <li id="location">Location: Korea</li>
+                        <li id="createdAt">Member Since: 2018</li>
+                    </ul>
+                </div>
             </div>
         </main>
 
