@@ -7,11 +7,14 @@ const BASE_URL = 'https://api.github.com';
 async function searchUsersByUserName(userName) {
     try {
         const response = await fetch(`${BASE_URL}/search/users?q=${userName}`);
+        console.log(response);
         const data = await response.json();
         return await data.items.map(e => new UserSearchResult(e));
     }
     catch (e) {
+        window.alert('잠시 후에 시도해주세요.');
         console.error(e);
+        return [];
     }
 }
 
