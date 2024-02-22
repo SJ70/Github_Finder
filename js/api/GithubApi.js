@@ -1,10 +1,12 @@
+import User from '../class/User.js';
+
 const BASE_URL = 'https://api.github.com';
 
-async function getUserInfoByUserName(userName) {
+async function getUserByUserName(userName) {
     try {
         const response = await fetch(`${BASE_URL}/users/${userName}`);
         const data = await response.json();
-        return data;
+        return new User(data);
     }
     catch (e) {
         console.error(e);
@@ -22,4 +24,4 @@ async function getRecentReposByUser(user, count) {
     }
 }
 
-export {getUserInfoByUserName, getRecentReposByUser};
+export {getUserByUserName, getRecentReposByUser};

@@ -1,7 +1,7 @@
 export default class User {
 
     constructor(userInfo) {
-        this.userName = userInfo.login;
+        this.name = userInfo.login;
         this.avatar_url = userInfo.avatar_url;
         this.profile_url = userInfo.html_url;
 
