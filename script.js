@@ -1,5 +1,6 @@
-import { getUserByUserName, getRecentReposByUser } from './js/api/GithubApi.js';
+import { searchUsersByUserName, getUserByUserName, getRecentReposByUser } from './js/api/GithubApi.js';
 import displayReposEl from './js/element/displayReposEl.js';
+import { clearResults, displaySearchResultsEl } from './js/element/displaySearchResultsEl.js';
 import ProfileView from './js/element/ProfileView.js';
 import User from './js/class/User.js';
 
@@ -8,13 +9,23 @@ const searchUserInputEl = document.getElementById('searchUserInput');
 const profileView = new ProfileView();
 
 searchUserInputEl.addEventListener('input', async (event) => {
+  const inputValue = event.target.value;
+  if (inputValue == "") {
+    clearResults();
+    return;
+  }
+
+  const searchUserResult = await searchUsersByUserName(inputValue);
+  console.log(searchUserResult);
+  displaySearchResultsEl(searchUserResult);
+
   // user = getUserByUserName(event.target.value);
-  const userInfo = JSON.parse(static_data);
-  const user = new User(userInfo);
-  profileView.setAttribute(user);
+  // const userInfo = JSON.parse(static_data);
+  // const user = new User(userInfo);
+  // profileView.setAttribute(user);
   
-  const reposInfo = await getRecentReposByUser(user, 5);
-  await displayReposEl(reposInfo);
+  // const reposInfo = await getRecentReposByUser(user, 5);
+  // await displayReposEl(reposInfo);
 });
 
 // 요청 횟수 제한을 위한 정적 데이터

@@ -1,7 +1,19 @@
 import User from '../class/User.js';
 import Repository from '../class/Repository.js';
+import UserSearchResult from '../class/UserSearchResult.js';
 
 const BASE_URL = 'https://api.github.com';
+
+async function searchUsersByUserName(userName) {
+    try {
+        const response = await fetch(`${BASE_URL}/search/users?q=${userName}`);
+        const data = await response.json();
+        return await data.items.map(e => new UserSearchResult(e));
+    }
+    catch (e) {
+        console.error(e);
+    }
+}
 
 async function getUserByUserName(userName) {
     try {
@@ -25,4 +37,4 @@ async function getRecentReposByUser(user, count) {
     }
 }
 
-export {getUserByUserName, getRecentReposByUser};
+export {searchUsersByUserName, getUserByUserName, getRecentReposByUser};
