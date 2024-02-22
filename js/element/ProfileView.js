@@ -18,16 +18,17 @@ export default class ProfileView {
 
     setAttribute(user) {
         profileImage.setAttribute("src", user.avatar_url); 
-        viewProfileBtn.setAttribute("onclick", `location.href='${user.profile_url}'`);
+        profileImage.addEventListener("click", () => window.open(user.profile_url, "_blank"));
+        viewProfileBtn.addEventListener("click", () => window.open(user.profile_url, "_blank"));
         
         publicReposBtn.textContent = `Public Repos: ${user.public_repos}`;
-        publicReposBtn.setAttribute("onclick", `location.href='${user.profile_url}?tab=repositories'`);
+        publicReposBtn.addEventListener("click", () => window.open(`${user.profile_url}?tab=repositories`, "_blank"));
         publicGistsBtn.textContent = `Public Gists: ${user.public_gists}`;
-        publicGistsBtn.setAttribute("onclick", `location.href='https://gist.github.com/${user.name}'`);
+        publicGistsBtn.addEventListener("click", () => window.open(`https://gist.github.com/${user.name}`, "_blank"));
         followersBtn.textContent = `Followers: ${user.followers}`;
-        followersBtn.setAttribute("onclick", `location.href='${user.profile_url}?tab=followers'`);
+        followersBtn.addEventListener("click", () => window.open(`${user.profile_url}?tab=followers`, "_blank"));
         followingBtn.textContent = `Following: ${user.following}`;
-        followingBtn.setAttribute("onclick", `location.href='${user.profile_url}?tab=following'`);
+        followingBtn.addEventListener("click", () => window.open(`${user.profile_url}?tab=following`, "_blank"));
 
         company.textContent = `Company: ${user.company}`;
         blog.textContent = `Blog: ${user.blog}`;

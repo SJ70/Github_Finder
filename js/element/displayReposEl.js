@@ -11,8 +11,8 @@ export default async function displayReposEl(repoInfos) {
 
 function getRepoEl (repo) {
     const repoBox = document.createElement("li");
-    repoBox.addEventListener("click", (event) => {
-      location.href = `${repo.html_url}`;
+    repoBox.addEventListener("click", () => {
+      window.open(repo.html_url, "_blank");
     });
     repoBox.classList.add("repo"); 
     repoBox.classList.add("box");
@@ -39,7 +39,7 @@ function getStarsTagEl (repo) {
     btnEl.classList = "tag";
     btnEl.innerText = `Stars: ${repo.stars}`;
     btnEl.addEventListener("click", (event) => {
-      location.href = `${repo.html_url}/stargazers`;
+      window.open(`${repo.html_url}/stargazers`, "_blank");
       event.stopPropagation();
     });
     liEl.appendChild(btnEl);
@@ -54,7 +54,7 @@ function getWatchersTagEl (repo) {
     btnEl.classList = "tag";
     btnEl.innerText = `Watchers: ${repo.watchers}`;
     btnEl.addEventListener("click", (event) => {
-      location.href = `${repo.html_url}/watchers`;
+      window.open(`${repo.html_url}/watchers`, "_blank");
       event.stopPropagation();
     });
     liEl.appendChild(btnEl);
@@ -69,7 +69,7 @@ function getForksTagEl (repo) {
     btnEl.classList = "tag";
     btnEl.innerText = `Forks: ${repo.forks}`;
     btnEl.addEventListener("click", (event) => {
-      location.href = `${repo.html_url}/forks`;
+      window.open(`${repo.html_url}/forks`, "_blank");
       event.stopPropagation();
     });
     liEl.appendChild(btnEl);
