@@ -1,4 +1,15 @@
-export default function getRepoEl (repo) {
+const reposEl = document.getElementById("repos");
+
+export default async function displayReposEl(repoInfos) {
+  reposEl.innerHTML = '';
+
+  for (const repoInfo of repoInfos) {
+    const repoEl = getRepoEl(repoInfo);
+    reposEl.appendChild(repoEl);
+  }
+}
+
+function getRepoEl (repo) {
     const repoBox = document.createElement("li");
     repoBox.classList.add("repo"); 
     repoBox.classList.add("box");

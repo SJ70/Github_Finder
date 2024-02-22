@@ -1,10 +1,9 @@
 import { getUserByUserName, getRecentReposByUser } from './js/api/GithubApi.js';
-import getRepoEl from './js/element/getRepoEl.js';
+import displayReposEl from './js/element/displayReposEl.js';
 import ProfileView from './js/element/ProfileView.js';
 import User from './js/class/User.js';
 
 const searchUserInputEl = document.getElementById('searchUserInput');
-const reposEl = document.getElementById("repos");
 
 const profileView = new ProfileView();
 
@@ -12,9 +11,10 @@ searchUserInputEl.addEventListener('input', async (event) => {
   // user = getUserByUserName(event.target.value);
   const userInfo = JSON.parse(static_data);
   const user = new User(userInfo);
-  
   profileView.setAttribute(user);
-  await displayRepos(user);
+  
+  const reposInfo = await getRecentReposByUser(user, 5);
+  await displayReposEl(reposInfo);
 });
 
 // 요청 횟수 제한을 위한 정적 데이터
@@ -52,13 +52,3 @@ const static_data = `{
   "created_at": "2019-05-15T15:13:57Z",
   "updated_at": "2024-01-06T10:31:08Z"
 }`;
-
-async function displayRepos(user) {
-  reposEl.innerHTML = '';
-
-  const repoInfos = await getRecentReposByUser(user, 5);
-  for (const repoInfo of repoInfos) {
-    const repoEl = getRepoEl(repoInfo);
-    reposEl.appendChild(repoEl);
-  }
-}
