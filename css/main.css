@@ -11,3 +11,7 @@ main .box {
     margin-right: 1em;
     padding: 1em;
 }
+
+.invisible{
+    display: none !important; 
+}

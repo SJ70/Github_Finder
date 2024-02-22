@@ -37,15 +37,11 @@
                     <div class="search-bar-section">
                         <input id="searchUserInput" type="text">
                         <ul id="searchResults" class="search-result-list">
-                            <li><img class="profile-thumbnail" id="profileThumbnail" alt="profile-thumbnail" src="/img/logo.png">SJ70</li>
-                            <li><img class="profile-thumbnail" id="profileThumbnail" alt="profile-thumbnail" src="/img/logo.png">SJ70</li>
-                            <li><img class="profile-thumbnail" id="profileThumbnail" alt="profile-thumbnail" src="/img/logo.png">SJ70</li>
-                            <li><img class="profile-thumbnail" id="profileThumbnail" alt="profile-thumbnail" src="/img/logo.png">SJ70</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="profile box">
+                <div id="profile" class="profile box invisible">
                     <div class="profile-image-div">
                         <img class="profile-image" id="profileImage" alt="profile-image" src="/img/logo.png">
                         <button class="view-profile-btn" id="viewProfileBtn">View Profile</button>
@@ -53,66 +49,25 @@
 
                     <div class="profile-description">
                         <ul class="tags">
-                            <li><button class="tag" id="publicReposBtn">Public Repos: 100</button></li>
-                            <li><button class="tag" id="publicGistsBtn">Public Gists: 200</button></li>
-                            <li><button class="tag" id="followersBtn">Followers: 300</button></li>
-                            <li><button class="tag" id="followingBtn">Following: 400</button></li>
+                            <li><button class="tag" id="publicReposBtn"></button></li>
+                            <li><button class="tag" id="publicGistsBtn"></button></li>
+                            <li><button class="tag" id="followersBtn"></button></li>
+                            <li><button class="tag" id="followingBtn"></button></li>
                         </ul>
                         <ul class="descriptions">
-                            <li id="company">Company: null</li>
-                            <li id="blog">Blog: www.aaa.com</li>
-                            <li id="location">Location: Korea</li>
-                            <li id="createdAt">Member Since: 2018</li>
+                            <li id="company"></li>
+                            <li id="blog"></li>
+                            <li id="location"></li>
+                            <li id="createdAt"></li>
                         </ul>
                     </div>
                 </div>
 
-                <p class="repos-title">
+                <p id="repos-title" class="repos-title invisible">
                     Lastest Repos
                 </p>
 
                 <ul id="repos" class="repos">
-                        
-                    <li class="repo box">
-                        <p class="repo-title">github finder</p>
-                        <ul class="tags">
-                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                        </ul>
-                    </li>
-                    <li class="repo box">
-                        <p class="repo-title">todo app</p>
-                        <ul class="tags">
-                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                        </ul>
-                    </li>
-                    <li class="repo box">
-                        <p class="repo-title">github finder</p>
-                        <ul class="tags">
-                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                        </ul>
-                    </li>
-                    <li class="repo box">
-                        <p class="repo-title">todo app</p>
-                        <ul class="tags">
-                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                        </ul>
-                    </li>
-                    <li class="repo box">
-                        <p class="repo-title">github finder</p>
-                        <ul class="tags">
-                            <li><button class="tag" id="starsBtn">Stars: 1</button></li>
-                            <li><button class="tag" id="watchersBtn">Watchers: 2</button></li>
-                            <li><button class="tag" id="forksBtn">Forks: 3</button></li>
-                        </ul>
-                    </li>
                 </ul>
             </main>
         </div>

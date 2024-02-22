@@ -14,4 +14,7 @@ export default async function displayResult(userName) {
     await displayReposEl(reposInfo);
     
     clearResults();
+
+    document.getElementById("profile").classList.remove("invisible");
+    document.getElementById("repos-title").classList.remove("invisible");
 }
