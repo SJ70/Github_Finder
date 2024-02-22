@@ -7,7 +7,7 @@ const BASE_URL = 'https://api.github.com';
 async function searchUsersByUserName(userName) {
     try {
         const response = await fetch(`${BASE_URL}/search/users?q=${userName}`);
-        console.log(response);
+        console.log('검색 결과 : ', response);
         const data = await response.json();
         return await data.items.map(e => new UserSearchResult(e));
     }
@@ -21,6 +21,7 @@ async function searchUsersByUserName(userName) {
 async function getUserByUserName(userName) {
     try {
         const response = await fetch(`${BASE_URL}/users/${userName}`);
+        console.log('유저 정보 : ', response);
         const data = await response.json();
         return await new User(data);
     }
@@ -32,6 +33,7 @@ async function getUserByUserName(userName) {
 async function getRecentReposByUser(user, count) {
     try {
         const response = await fetch(`${BASE_URL}/users/${user.name}/repos?per_page=${count}&sort=created`);
+        console.log('저장소 정보 : ', response);
         const data = await response.json();
         return await data.map(e => new Repository(e));
     }
