@@ -1,3 +1,5 @@
+import displayResult from './DisplayResult.js';
+
 const resultsEl = document.getElementById("searchResults");
 
 export function displaySearchResultsEl (results) {
@@ -13,6 +15,7 @@ export function clearResults () {
 
 function getResultEl(result) {
     const resultEl = document.createElement('li');
+    resultEl.addEventListener('click', () => displayResult(result.name));
 
     const thumbnailEl = document.createElement('img');
     thumbnailEl.classList.add("profile-thumbnail");
