@@ -1,6 +1,6 @@
 import { getUserByUserName, getRecentReposByUser } from './js/api/GithubApi.js';
-import getRepoEl from './js/class/getRepoEl.js';
-import ProfileView from './js/class/ProfileView.js';
+import getRepoEl from './js/element/getRepoEl.js';
+import ProfileView from './js/element/ProfileView.js';
 import User from './js/class/User.js';
 
 const searchUserInputEl = document.getElementById('searchUserInput');
