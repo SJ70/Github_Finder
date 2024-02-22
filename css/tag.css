@@ -8,6 +8,12 @@
 .tag {
     font-size: .7em;
     padding: .5em 1em .5em 1em;
+
+    transition: all 0.5s;
+}
+
+.tag:hover {
+    opacity: 50%;
 }
 
 .tags :nth-child(4n + 1) .tag {

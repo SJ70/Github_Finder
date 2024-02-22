@@ -20,6 +20,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    transition: background-color 0.5s;
+}
+
+.repo:hover {
+    background-color: var(--skyblue);
+    cursor: pointer;
 }
 
 .repo-title {
