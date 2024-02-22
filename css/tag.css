@@ -15,11 +15,11 @@
 }
 
 .tags :nth-child(4n + 2) .tag {
-    background-color: var(--green);
+    background-color: var(--grey);
 }
 
 .tags :nth-child(4n + 3) .tag {
-    background-color: var(--grey);
+    background-color: var(--green);
 }
 
 .tags :nth-child(4n) .tag {
