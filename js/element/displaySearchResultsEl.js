@@ -4,6 +4,11 @@ const resultsEl = document.getElementById("searchResults");
 
 export function displaySearchResultsEl (results) {
     clearResults();
+    
+    if (results.length > 0) {
+        resultsEl.classList.remove('invisible');
+    }
+
     for (const result of results) {
         resultsEl.appendChild(getResultEl(result));
     }
@@ -11,6 +16,7 @@ export function displaySearchResultsEl (results) {
 
 export function clearResults () {
     resultsEl.innerHTML = "";
+    resultsEl.classList.add('invisible');
 } 
 
 function getResultEl(result) {

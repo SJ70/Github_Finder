@@ -29,6 +29,14 @@
     position: absolute;
     width: 100%;
     font-size: .8em;
+    
+    max-height: 23em;
+    overflow-y: scroll;
+    
+    border: 1px solid var(--border-color);
+    border-radius: .25em;
+    box-sizing: border-box;
+    transform: translateY(-1px);
 }
 
 .search-result-list img{
@@ -47,25 +55,13 @@
     box-sizing: border-box;
     padding: .5em .75em .5em .75em;
     
-    border: 1px solid var(--border-color);
-    transform: translateY(-1px);
-    border-bottom: none;
     background-color: var(--white);
     cursor: pointer;
     transition: background-color 0.5s;
+    
+    border-bottom: 1px solid var(--border-color);
 }
 
 .search-result-list li:hover{
     background-color: var(--skyblue);
-}
-
-.search-result-list li:first-child {
-    border-top-left-radius: .25em;
-    border-top-right-radius: .25em;
-}
-
-.search-result-list li:last-child {
-    border-bottom: 1px solid var(--border-color);
-    border-bottom-left-radius: .25em;
-    border-bottom-right-radius: .25em;
 }
