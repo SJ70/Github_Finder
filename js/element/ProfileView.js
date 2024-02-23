@@ -30,10 +30,10 @@ export default class ProfileView {
         followingBtn.textContent = `Following: ${user.following}`;
         followingBtn.addEventListener("click", () => window.open(`${user.profile_url}?tab=following`, "_blank"));
 
-        company.textContent = `Company: ${user.company}`;
-        blog.textContent = `Blog: ${user.blog}`;
-        location.textContent = `Location: ${user.location}`;
-        createdAt.textContent = `Member Since: ${user.created_at}`;
+        company.textContent = `Company: ${user.company ? user.company : ""}`;
+        blog.textContent = `Blog: ${user.blog ? user.blog : ""}`;
+        location.textContent = `Location: ${user.location ? user.location : ""}`;
+        createdAt.textContent = `Member Since: ${user.created_at.split('T')[0]}`;
     }
 
 }
