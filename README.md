@@ -14,7 +14,7 @@
 
 ● 아래 링크 (그림 1)의 리소스 형상(manifest)이 올라간 결과물 레포 주소 (URL 제출)
 
-![그림 1](https://lh4.googleusercontent.com/0ssibwlS0PUq_PLuxVrNIWWWALeAVmxcMwBi_oJOS5QAxp_XMWO-fK1cbd-OGQ0Tw9gyY3VPbJdIv26d2V38lDvDa7I1HXXqXKQDWJ4Vt5A7FVQ8yHr-Xd_oTB6-YAjNErvxJ8QS3CoCo5CFIoTdH0o)
+![그림 1](./img/github-finder-ref.png)
 
 ---
 
