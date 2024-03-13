@@ -1,4 +1,4 @@
-> 👉 [배포 페이지 바로가기](https://sj70.github.io/Github_Finder/)
+> 👉 [배포 페이지 바로가기](https://sj70.github.io/github_finder/)
 
 # 자바스크립트를 이용해서 github finder 앱 만들기
 
